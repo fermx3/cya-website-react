@@ -1,4 +1,7 @@
 import Image from 'next/image';
+
+import Section, { SECTION_COLOR_CLASSES } from '../layout/section';
+
 import classes from './servicios-section.module.scss';
 
 const servicios = [
@@ -21,8 +24,11 @@ const servicios = [
 
 const ServiciosSection = () => {
   return (
-    <section id='servicios' className={classes.servicios}>
-      <h2>Nuestros Servicios</h2>
+    <Section
+      id='servicios'
+      titulo='Servicios'
+      sectionColor={SECTION_COLOR_CLASSES.secondary}
+    >
       <ul className={classes.grid}>
         {servicios.map((servicio) => (
           <li key={servicio.titulo} className={classes.card}>
@@ -36,7 +42,7 @@ const ServiciosSection = () => {
           </li>
         ))}
       </ul>
-    </section>
+    </Section>
   );
 };
 

@@ -1,5 +1,6 @@
 :root {
   --max-width: 1200px;
+  --half-width: 600px;
   --border-radius: 8px;
 
   --breakpoint-tablet: 768px;
@@ -10,7 +11,7 @@
 
   --primary-color: #1363df;
   --secondary-color: #47b5ff;
-  --ligth-color: #f3f3f3;
+  --ligth-color: #f3f7fe;
 
   --shadow-header-color: 87, 105, 105;
 
@@ -23,6 +24,8 @@
   --size-5: 3rem;
   --size-6: 4rem;
   --size-7: 5rem;
+  --size-8: 8rem;
+  --size-9: 10rem;
 
   /* z-index */
 

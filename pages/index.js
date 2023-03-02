@@ -4,6 +4,7 @@ import { Libre_Baskerville, Montserrat, Open_Sans } from 'next/font/google';
 import Hero from '@/components/hero/hero';
 import MainNavigation from '@/components/layout/main-navigation';
 import ServiciosSection from '@/components/servicios/servicios-section';
+import QuienesSomosSection from '@/components/quienes-somos/quienes-somos';
 
 const openSans = Open_Sans({
   weight: ['400', '700'],
@@ -31,6 +32,7 @@ export default function Home() {
         <MainNavigation />
         <Hero />
         <ServiciosSection />
+        <QuienesSomosSection />
       </main>
     </>
   );

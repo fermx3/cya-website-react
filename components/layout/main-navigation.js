@@ -5,7 +5,7 @@ import classes from './main-navigation.module.scss';
 
 const navigation = [
   { name: 'Servicios', href: '/#servicios' },
-  { name: 'Link 2', href: '/' },
+  { name: '¿Quiénes Somos?', href: '/#quienes-somos' },
   { name: 'Link 3', href: '/' },
 ];
 
@@ -32,8 +32,8 @@ const MainNavigation = () => {
             <ul>
               {navigation.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href}>
-                    <a onClick={() => setMenuOpen(false)}>{item.name}</a>
+                  <Link href={item.href} onClick={() => setMenuOpen(false)}>
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -49,7 +49,7 @@ const MainNavigation = () => {
           />
         )}
       </div>
-      <ul className={classes.menu} onClick={() => setMenuOpen(false)}>
+      <ul className={classes.menu}>
         {navigation.map((item) => (
           <li key={item.name}>
             <Link href={item.href}>{item.name}</Link>
