@@ -4,7 +4,7 @@ import { useState } from 'react';
 import classes from './main-navigation.module.scss';
 
 const navigation = [
-  { name: 'Link 1', href: '/' },
+  { name: 'Servicios', href: '/#servicios' },
   { name: 'Link 2', href: '/' },
   { name: 'Link 3', href: '/' },
 ];
@@ -32,7 +32,9 @@ const MainNavigation = () => {
             <ul>
               {navigation.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href}>{item.name}</Link>
+                  <Link href={item.href}>
+                    <a onClick={() => setMenuOpen(false)}>{item.name}</a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -47,7 +49,7 @@ const MainNavigation = () => {
           />
         )}
       </div>
-      <ul className={classes.menu}>
+      <ul className={classes.menu} onClick={() => setMenuOpen(false)}>
         {navigation.map((item) => (
           <li key={item.name}>
             <Link href={item.href}>{item.name}</Link>

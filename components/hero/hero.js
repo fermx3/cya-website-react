@@ -17,9 +17,9 @@ const Hero = () => {
             caracteriza.
           </p>
           <div className={classes.buttonGroup}>
-            <Button href='/'>Get Started</Button>
+            <Button href='/'>Contáctanos</Button>
             <Button href='/' buttonType={BUTTON_TYPE_CLASSES.transparent}>
-              Learn More →
+              Conoce más →
             </Button>
           </div>
         </div>

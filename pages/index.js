@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import { Libre_Baskerville, Montserrat, Open_Sans } from 'next/font/google';
+
 import Hero from '@/components/hero/hero';
 import MainNavigation from '@/components/layout/main-navigation';
+import ServiciosSection from '@/components/servicios/servicios-section';
 
 const openSans = Open_Sans({
   weight: ['400', '700'],
@@ -28,48 +30,7 @@ export default function Home() {
       <main className={openSans.className}>
         <MainNavigation />
         <Hero />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-          consectetur malesuada nunc vitae porttitor. Maecenas placerat finibus
-          nunc, eget commodo tortor pulvinar eu. Donec semper, diam non dictum
-          feugiat, dolor dolor aliquam ante, eu bibendum eros enim sed est.
-          Aliquam quis rhoncus libero, nec euismod nibh. Integer sed massa
-          pulvinar leo vehicula commodo a eget ante. Quisque consectetur
-          sagittis ligula id ullamcorper. Curabitur fermentum feugiat facilisis.
-          In hac habitasse platea dictumst. Cras sollicitudin quis purus sit
-          amet commodo. Nullam ex ante, aliquet et vulputate non, vestibulum ac
-          erat. Mauris in lobortis mi, quis pharetra magna. Etiam vulputate erat
-          a nunc convallis, vel ornare felis cursus. Aenean non tincidunt felis,
-          quis hendrerit erat. Quisque interdum cursus massa, sed laoreet elit.
-          Suspendisse potenti. Nunc nec nibh eget nisl commodo tempor. Duis sit
-          amet ligula tempor, euismod eros sit amet, volutpat sapien. Ut
-          facilisis rutrum eros id elementum. Fusce efficitur at nisi a
-          elementum. Nulla eu ex euismod, ultrices erat vel, dictum neque.
-          Nullam feugiat risus eu urna iaculis, nec consectetur nulla maximus.
-          Maecenas eleifend tortor et dolor euismod, at rutrum turpis finibus.
-          Pellentesque bibendum lorem eu ligula elementum ultrices. Vivamus nec
-          nulla in urna sagittis pulvinar. Phasellus viverra sapien dolor, sit
-          amet tempus risus pellentesque vel. Morbi enim felis, ultricies at
-          elementum eget, ultrices volutpat eros. Quisque nisi leo, sagittis et
-          mollis in, lacinia at mi. Praesent urna massa, ultricies non hendrerit
-          sit amet, venenatis et mi. Sed suscipit, augue pulvinar vehicula
-          sagittis, ligula justo iaculis urna, sed ultricies dolor nulla ac
-          metus. Suspendisse viverra viverra orci, in viverra libero lacinia
-          vel. Nunc et placerat purus, tempor mollis quam. Vestibulum malesuada
-          vestibulum condimentum. Integer eget sem in nisl lobortis iaculis eu
-          sit amet metus. Maecenas cursus nisi at diam facilisis, eu fermentum
-          erat aliquet. Sed dapibus semper felis, a sollicitudin elit accumsan
-          in. Phasellus cursus massa ultrices enim eleifend blandit. Curabitur
-          vel placerat lacus. Sed ornare, magna molestie consectetur hendrerit,
-          mi erat imperdiet orci, nec hendrerit sapien erat sed nunc. Nunc
-          laoreet tristique nulla sed ultrices. Maecenas luctus felis at enim
-          mattis hendrerit. Aenean eu tortor pharetra, facilisis ante sed,
-          viverra orci. Duis eget dui ac libero dignissim elementum vel vel
-          mauris. Fusce libero sem, convallis in venenatis eu, mattis non est.
-          Quisque sodales rutrum dolor. Vestibulum id felis non libero ornare
-          finibus sit amet id justo. Orci varius natoque penatibus et magnis dis
-          parturient montes, nascetur ridiculus mus.
-        </p>
+        <ServiciosSection />
       </main>
     </>
   );
