@@ -87,6 +87,7 @@ $breakpoint-tablet: 768px;
           font-size: var(--size-2);
           font-weight: 600;
           letter-spacing: 1px;
+          animation: fadeIn 0.2s ease 0s 1 normal forwards;
 
           li {
             margin: var(--size-5) 0;
@@ -98,5 +99,17 @@ $breakpoint-tablet: 768px;
     .menu {
       display: none;
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
