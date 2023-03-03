@@ -1,0 +1,25 @@
+.header {
+  margin: 0 auto var(--size-5) auto;
+
+  .titulo {
+    font-size: var(--size-4);
+    text-align: center;
+  }
+
+  .titulo:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: var(--foreground);
+    margin: 0 auto;
+  }
+
+  .subtitulo {
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    padding: var(--size-4) var(--size-1);
+    color: var(--foreground-muted);
+  }
+}

@@ -1,3 +1,4 @@
+import Header from '../ui/header';
 import classes from './section.module.scss';
 
 export const SECTION_COLOR_CLASSES = {
@@ -18,11 +19,8 @@ const Section = ({ children, id, titulo, subtitulo, sectionColor }) => {
 
   return (
     <section id={id} className={CustomSectionColor}>
-      <div>
-        <header>
-          <h2 className={classes.titulo}>{titulo}</h2>
-          {subtitulo && <p className={classes.subtitulo}>{subtitulo}</p>}
-        </header>
+      <div className={classes.wrapper}>
+        <Header titulo={titulo} subtitulo={subtitulo} />
         {children}
       </div>
     </section>

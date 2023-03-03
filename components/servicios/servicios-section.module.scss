@@ -4,33 +4,6 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
   gap: var(--size-3);
-
-  .card {
-    background: #fff;
-
-    .image {
-      position: relative;
-      height: 200px;
-      width: 100%;
-
-      img {
-        object-fit: cover;
-      }
-    }
-
-    .desc {
-      padding: var(--size-3);
-
-      h4 {
-        margin-bottom: var(--size-3);
-      }
-
-      p {
-        margin-bottom: var(--size-3);
-        white-space: pre-line;
-      }
-    }
-  }
 }

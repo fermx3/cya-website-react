@@ -14,12 +14,21 @@ const getButtonType = (buttonType = BUTTON_TYPE_CLASSES.base) =>
     [BUTTON_TYPE_CLASSES.transparent]: classes.transparentBtn,
   }[buttonType]);
 
-const Button = ({ children, href, buttonType }) => {
+const Button = ({ children, href, buttonType, onClick }) => {
   const CustomButton = getButtonType(buttonType);
+
+  if (href) {
+    return (
+      <Link href={href} className={CustomButton}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <Link href={href} className={CustomButton}>
+    <button onClick={onClick} className={CustomButton}>
       {children}
-    </Link>
+    </button>
   );
 };
 

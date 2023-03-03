@@ -1,6 +1,6 @@
 $breakpoint-tablet: 768px;
 
-.nav {
+%nav {
   color: var(--primary-color);
   background: var(--background-start);
   position: fixed;
@@ -13,6 +13,7 @@ $breakpoint-tablet: 768px;
   padding-left: var(--size-3);
   padding-right: 37vw;
   z-index: var(--z-1);
+  transition: all 0.2s ease-out;
 
   .logo {
     h1 {
@@ -38,7 +39,17 @@ $breakpoint-tablet: 768px;
   }
 }
 
-@media screen and (max-width: $breakpoint-tablet) {
+.nav {
+  @extend %nav;
+}
+
+.scrolled {
+  z-index: var(--z-3);
+  padding-right: var(--size-3);
+  transition: all 0.2s ease-out;
+}
+
+@media screen and (width < $breakpoint-tablet) {
   .nav {
     padding-right: var(--size-3);
 

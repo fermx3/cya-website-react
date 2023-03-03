@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import classes from './main-navigation.module.scss';
 
 const navigation = [
@@ -10,10 +10,27 @@ const navigation = [
 ];
 
 const MainNavigation = () => {
+  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleScroll = () => {
+    const offset = window.scrollY;
+
+    if (offset > 30) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className={classes.nav}>
+    <nav
+      className={scrolled ? `${classes.nav} ${classes.scrolled}` : classes.nav}
+    >
       <div className={classes.logo}>
         <Link href='/'>
           <h1>Cervantes Solis y Asociados S.C.</h1>

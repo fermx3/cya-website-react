@@ -1,5 +1,7 @@
 import Head from 'next/head';
-import { Libre_Baskerville, Montserrat, Open_Sans } from 'next/font/google';
+import { Open_Sans } from 'next/font/google';
+
+import { servicios } from '@/data/servicios';
 
 import Hero from '@/components/hero/hero';
 import MainNavigation from '@/components/layout/main-navigation';
@@ -13,16 +15,9 @@ const openSans = Open_Sans({
   weight: ['400', '500', '600', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
-}); //openSans.classname
-
-const montserrat = Montserrat({ subsets: ['latin'] });
-const libreBaskerville = Libre_Baskerville({
-  weight: ['400', '700'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
 });
 
-export default function Home() {
+export default function Home({ servicios }) {
   return (
     <>
       <Head>
@@ -34,7 +29,7 @@ export default function Home() {
       <main className={openSans.className}>
         <MainNavigation />
         <Hero />
-        <ServiciosSection />
+        <ServiciosSection servicios={servicios} />
         <QuienesSomosSection />
         <Mision />
         <ContactoSection />
@@ -43,3 +38,21 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps = () => {
+  const serviciosModified = servicios.map((servicio) => {
+    let newObj = {};
+
+    const newDesc = servicio.descripcion.split('. ').join('.\n\n');
+
+    newObj = { ...servicio, descripcion: newDesc };
+
+    return newObj;
+  });
+
+  return {
+    props: {
+      servicios: serviciosModified,
+    },
+  };
+};
