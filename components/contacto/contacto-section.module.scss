@@ -1,0 +1,47 @@
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+
+  .contactInfo {
+    background-color: #fff;
+    padding: var(--size-1) var(--size-3);
+    border-bottom: solid 4px var(--primary-color);
+
+    h4 {
+      margin-bottom: var(--size-3);
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .dato {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        margin-bottom: var(--size-0);
+        align-items: center;
+
+        .icon {
+          background: var(--primary-color);
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          justify-content: center;
+          align-items: center;
+          margin-right: var(--size-0);
+        }
+
+        .texto {
+          display: flex;
+          flex-direction: column;
+
+          p:first-child {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

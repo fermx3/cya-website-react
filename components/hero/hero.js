@@ -17,18 +17,21 @@ const Hero = () => {
             caracteriza.
           </p>
           <div className={classes.buttonGroup}>
-            <Button href='/'>Contáctanos</Button>
-            <Button href='/' buttonType={BUTTON_TYPE_CLASSES.transparent}>
+            <Button href='/#contacto'>Contáctanos</Button>
+            <Button
+              href='/#servicios'
+              buttonType={BUTTON_TYPE_CLASSES.transparent}
+            >
               Conoce más →
             </Button>
           </div>
         </div>
         <div className={classes.mobileImage}>
-          <Image src='/images/header-img.jpg' alt='contadores' fill />
+          <Image src='/images/header-contadores.jpg' alt='contadores' fill />
         </div>
       </header>
       <div className={classes.image}>
-        <Image src='/images/header-img.jpg' alt='contadores' fill />
+        <Image src='/images/header-contadores.jpg' alt='contadores' fill />
       </div>
     </div>
   );

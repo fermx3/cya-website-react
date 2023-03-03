@@ -22,6 +22,7 @@ $breakpoint-mobile: 480px;
     p {
       margin-bottom: var(--size-5);
       line-height: var(--size-3);
+      color: var(--foreground-muted);
     }
     .buttonGroup {
       display: flex;

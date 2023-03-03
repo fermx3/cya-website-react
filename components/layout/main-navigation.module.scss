@@ -29,10 +29,11 @@ $breakpoint-tablet: 768px;
     display: flex;
     list-style: none;
     font-size: var(--size-1);
+    font-weight: 600;
+    letter-spacing: 1px;
 
     li {
       margin: 0 var(--size-4);
-      text-transform: uppercase;
     }
   }
 }
@@ -73,7 +74,8 @@ $breakpoint-tablet: 768px;
           height: 100vh;
           padding: 0 var(--size-5);
           font-size: var(--size-2);
-          font-weight: bold;
+          font-weight: 600;
+          letter-spacing: 1px;
 
           li {
             margin: var(--size-5) 0;

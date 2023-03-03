@@ -8,7 +8,11 @@ const QuienesSomosSection = () => {
     <Section id={'quienes-somos'} titulo='¿Quiénes Somos?'>
       <div className={classes.wrapper}>
         <div className={classes.image}>
-          <Image src='/images/header-img.jpg' alt='quienes somos?' fill />
+          <Image
+            src='/images/header-contadores.jpg'
+            alt='quienes somos?'
+            fill
+          />
         </div>
         <div className={classes.contenido}>
           <p>

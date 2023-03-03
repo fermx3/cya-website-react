@@ -6,7 +6,7 @@ import classes from './main-navigation.module.scss';
 const navigation = [
   { name: 'Servicios', href: '/#servicios' },
   { name: '¿Quiénes Somos?', href: '/#quienes-somos' },
-  { name: 'Link 3', href: '/' },
+  { name: 'Contacto', href: '/#contacto' },
 ];
 
 const MainNavigation = () => {
