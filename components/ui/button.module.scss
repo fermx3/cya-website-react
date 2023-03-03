@@ -9,7 +9,7 @@ $breakpoint-mobile: 480px;
   padding: 18px 32px;
   border-radius: var(--border-radius);
   border: none;
-  transition: all 0.5s ease-in;
+  transition: all 0.2s ease;
   color: var(--ligth-color);
   cursor: pointer;
 }
@@ -19,15 +19,38 @@ $breakpoint-mobile: 480px;
   background: var(--primary-color);
 }
 
+.btn:hover,
+.btn:focus {
+  filter: saturate(200%);
+}
+
 .secondaryBtn {
   @extend %btn;
-  background: var(--secondary-color);
+  background: transparent;
+  color: var(--primary-color);
+  border: solid 1px var(--primary-color);
+}
+
+.secondaryBtn:hover,
+.secondaryBtn:focus {
+  @extend %btn;
+  background: var(--primary-color);
+  border: solid 1px var(--primary-color);
 }
 
 .transparentBtn {
   @extend %btn;
   color: var(--foreground-color);
   padding: 18px 12px 18px 20px;
+}
+
+.transparentBtn::after {
+  content: ' →';
+}
+
+.transparentBtn:hover,
+.transparentBtn:focus {
+  transform: translateX(5px);
 }
 
 @media screen and (max-width: $breakpoint-mobile) {

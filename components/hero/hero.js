@@ -22,7 +22,7 @@ const Hero = () => {
               href='/#servicios'
               buttonType={BUTTON_TYPE_CLASSES.transparent}
             >
-              Conoce más →
+              Conoce más
             </Button>
           </div>
         </div>

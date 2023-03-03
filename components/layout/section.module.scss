@@ -19,7 +19,7 @@
 
 .dark {
   @extend %section;
-  background-color: var(--foreground);
+  background: var(--foreground);
   color: var(--ligth-color);
   position: relative;
   display: flex;
@@ -28,14 +28,14 @@
 
   div {
     header {
-      .titulo,
+      h2,
       p {
         position: relative;
         color: #ffffff;
       }
 
-      .titulo:after {
-        background: var(--ligth-color);
+      h2::after {
+        background-color: var(--ligth-color) !important;
       }
     }
   }
